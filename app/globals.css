@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Previous CSS rules remain the same... */
+
+/* Add specific styles for SDG cards */
+@layer components {
+  .sdg-card {
+    @apply bg-green-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .sdg-number {
+    @apply text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2;
+  }
+
+  .sdg-title {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+}
+
+/* Improve animation performance */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
