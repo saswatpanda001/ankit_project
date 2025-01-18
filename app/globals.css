@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Previous CSS rules remain the same... */
+
+/* Add specific styles for SDG cards */
+@layer components {
+  .sdg-card {
+    @apply bg-green-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .sdg-number {
+    @apply text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2;
+  }
+
+  .sdg-title {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .update-card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl;
+  }
+
+  .update-card-image {
+    @apply relative h-48 md:h-64;
+  }
+
+  .update-card-content {
+    @apply p-6;
+  }
+
+  .update-card-title {
+    @apply text-xl font-semibold mb-2 text-gray-800 dark:text-white;
+  }
+
+  .update-card-description {
+    @apply text-gray-600 dark:text-gray-300 mb-4;
+  }
+
+  .update-card-date {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+}
+
+/* Improve animation performance */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
